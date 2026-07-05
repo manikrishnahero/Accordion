@@ -1,0 +1,235 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100dvh;
+  background: #e0e0e0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 30px;
+}
+
+.container {
+  min-height: 100px;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.list-part {
+  min-height: 70px;
+  width: 100%;
+  background: #e0e0e0;
+  box-shadow:
+    5px 5px 10px #bebebe,
+    -5px -5px 10px #ffffff;
+  border-radius: 20px;
+}
+
+.accordion-title {
+  height: 70px;
+  width: 100%;
+  background-color: #edecec;
+  display: flex;
+  align-items: center;
+  position: relative;
+  border-radius: 20px;
+  cursor: pointer;
+
+  h1 {
+    font-size: 23px;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  }
+}
+
+.accordion-title::after {
+  content: "⌵";
+  display: block;
+  position: absolute;
+  right: 20px;
+  color: black;
+  font-size: 20px;
+  -webkit-text-stroke: 1.5px;
+  font-weight: bold;
+  transition: all 0.3s linear;
+}
+
+.accordion-details {
+  display: none;
+
+  p {
+    text-align: justify;
+    line-height: 25px;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  }
+}
+
+.activate .accordion-title::after {
+  transform: rotate(180deg);
+}
+
+.activate .accordion-title {
+  border-bottom: 1px solid black;
+  border-radius: 20px 20px 0px 0px;
+}
+
+.activate .accordion-details {
+  display: block;
+  min-height: 100px;
+  width: 100%;
+  background-color: #edecec;
+  display: flex;
+  align-items: center;
+  padding: 15px;
+  transition: all 0.2s linear;
+  border-radius: 0px 0px 20px 20px;
+}
+
+/* Medai Query */
+
+@media only screen and (min-width: 250px) {
+  body {
+    padding: 20px;
+  }
+
+  .container {
+    width: 100%;
+  }
+
+  .accordion-title {
+    padding: 15px 40px 15px 15px;
+    h1 {
+      font-size: 14px;
+    }
+  }
+}
+
+@media only screen and (min-width: 320px) {
+  body {
+    padding: 20px;
+  }
+
+  .container {
+    width: 100%;
+  }
+
+  .accordion-title {
+    padding: 15px 40px 15px 15px;
+    h1 {
+      font-size: 14px;
+    }
+  }
+}
+
+@media only screen and (min-width: 375px) {
+  body {
+    padding: 20px;
+  }
+
+  .container {
+    width: 100%;
+  }
+
+  .accordion-title {
+    padding: 15px 80px 15px 15px;
+    h1 {
+      font-size: 16px;
+    }
+  }
+}
+
+@media only screen and (min-width: 425px) {
+  body {
+    padding: 20px;
+  }
+
+  .container {
+    width: 100%;
+  }
+
+  .accordion-title {
+    padding: 15px 80px 15px 15px;
+    h1 {
+      font-size: 18px;
+    }
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  body {
+    padding: 20px;
+  }
+
+  .container {
+    width: 60%;
+  }
+
+  .accordion-title {
+    padding: 15px 100px 15px 15px;
+    h1 {
+      font-size: 18px;
+    }
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  body {
+    padding: 20px;
+  }
+
+  .container {
+    width: 60%;
+  }
+
+  .accordion-title {
+    padding: 15px 100px 15px 15px;
+    h1 {
+      font-size: 20px;
+    }
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+  body {
+    padding: 30px;
+  }
+
+  .container {
+    width: 50%;
+  }
+
+  .accordion-title {
+    padding: 15px 100px 15px 15px;
+    h1 {
+      font-size: 23px;
+    }
+  }
+}
+
+@media only screen and (min-width: 2560px) {
+  body {
+    padding: 30px;
+  }
+
+  .container {
+    width: 50%;
+  }
+
+  .accordion-title {
+    height: 100px;
+    padding: 15px 100px 15px 15px;
+    h1 {
+      font-size: 35px;
+    }
+  }
+
+  .accordion-details p {
+    font-size: 25px;
+    line-height: 45px;
+  }
+}
